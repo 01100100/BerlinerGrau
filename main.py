@@ -253,10 +253,8 @@ def main():
             repo.git.push()
             log("🔄", "Changes pushed to GitHub")
 
-            # Calculate time until next hour
-            next_hour = 3600 - (int(time.time()) % 3600)
-            log("⏰", f"Next capture in {next_hour} seconds")
-            time.sleep(next_hour)
+            log("⏰", f"Next capture in 300 seconds")
+            time.sleep(300)
 
         except Exception as e:
             log("❌", f"Error: {e}")
