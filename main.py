@@ -221,10 +221,30 @@ def main():
                 },
             }
 
+            # Save current data (overwrite)
             current_path = os.path.join(DATA_DIR, "current.json")
             with open(current_path, "w") as f:
                 json.dump(data, f)
             log("💾", f"Data saved to {current_path}")
+
+            # Update history (append)
+            history_path = os.path.join(DATA_DIR, "history.json")
+            # Load existing history or create new one
+            try:
+                if os.path.exists(history_path):
+                    with open(history_path, "r") as f:
+                        history = json.load(f)
+                else:
+                    history = []
+            except Exception as e:
+                log("⚠️", f"Error reading history file: {e}")
+                history = []
+
+            # Append new entry and save
+            history.append(data)
+            with open(history_path, "w") as f:
+                json.dump(history, f)
+            log("📊", f"History updated with {len(history)} entries")
 
             # Git update
             repo = Repo(REPO_PATH)
