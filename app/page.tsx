@@ -186,7 +186,7 @@ export default function Home() {
                     <span className="text-lg font-bold">{activeData.stats.greyness.berlin_grey_index.toFixed(1)}%</span>
                   </div>
                   <Progress value={activeData.stats.greyness.berlin_grey_index} className="h-3 rounded-full" />
-                  <p className="text-sm text-muted-foreground mt-2 italic">"{activeData.stats.greyness.description}"</p>
+                  <p className="text-sm text-muted-foreground mt-2 italic">{activeData.stats.greyness.description}</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -237,7 +237,7 @@ export default function Home() {
                     </div>
                     <Progress value={activeData.stats.brightness_percent} className="h-2.5 bg-muted/50 [&>div]:bg-yellow-500/80" />
                     <p className="text-xs text-muted-foreground mt-1">
-                      {getMetricDescription(activeData.stats.brightness_percent, 'brightness')}
+                      {getMetricDescription(activeData.stats.brightness_percent, "brightness")}
                     </p>
                   </div>
 
@@ -248,7 +248,7 @@ export default function Home() {
                     </div>
                     <Progress value={activeData.stats.hsv[1]} className="h-2.5 bg-muted/50 [&>div]:bg-violet-500/80" />
                     <p className="text-xs text-muted-foreground mt-1">
-                      {getMetricDescription(activeData.stats.hsv[1], 'saturation')}
+                      {getMetricDescription(activeData.stats.hsv[1], "saturation")}
                     </p>
                   </div>
                 </div>

@@ -5,8 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const getMetricDescription = (value: number, type: 'brightness' | 'saturation') => {
-  if (type === 'brightness') {
+export const getMetricDescription = (value: number, type: "brightness" | "saturation") => {
+  if (type === "brightness") {
     if (value < 30) return "Dark & moody"
     if (value < 50) return "Dim light"
     if (value < 70) return "Moderately bright"

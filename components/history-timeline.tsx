@@ -52,10 +52,10 @@ export default function HistoryTimeline({ historyData, selectedIndex, onSelectIn
   const formatDateTime = (timestamp: string) => {
     const date = parseTimestamp(timestamp)
     return date.toLocaleString("en-DE", {
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
     })
   }
 

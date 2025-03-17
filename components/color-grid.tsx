@@ -35,7 +35,7 @@ export default function ColorGrid({ grid }: ColorGridProps) {
     <div className="border rounded-lg p-3 bg-muted/10 overflow-hidden shadow-inner">
       <canvas ref={canvasRef} className="w-full h-auto rounded-md" style={{ imageRendering: "pixelated" }} />
       <p className="text-xs text-center text-muted-foreground mt-2">
-        N52°29'12.547'', E13°26'35.345'' - {grid.length}×{grid[0]?.length || 0}
+        N52°29&apos;12.547&apos;&apos;, E13°26&apos;35.345&apos;&apos; - {grid.length}×{grid[0]?.length || 0}
       </p>
     </div>
   )
