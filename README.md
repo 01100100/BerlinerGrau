@@ -27,10 +27,10 @@ The next step was to script the camera to take a photo every 5 minutes.
 
 I decide to write a simple python script to take a photo, parse some interesting data from the image and push the data to a github repo via git.
 
-I use Uv these days as my goto python environment tool of choice,  I wanted to write code from my laptop and manage the environment with `uv` and nicely define dependencies a la good practice... but I actually bumped into some issues with the `picamera2` library.
+I use Uv these days as my goto python environment tool of choice, I wanted to write code from my laptop and manage the environment with `uv` and nicely define dependencies a la good practice... but I actually bumped into some issues with the `picamera2` library.
 
 ```bash
-(berlinergrau) ➜  BerlinerGrau git:(main) ✗ uv add picamera2 
+(berlinergrau) ➜  BerlinerGrau git:(main) ✗ uv add picamera2
   × Failed to build `python-prctl==1.8.1`
   ├─▶ The build backend returned an error
   ╰─▶ Call to `setuptools.build_meta:__legacy__.build_wheel` failed (exit status: 1)

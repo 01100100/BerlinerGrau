@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 interface ColorDistributionProps {
   distribution: {
-    [key: string]: number
-  }
+    [key: string]: number;
+  };
 }
 
 const colorMap: Record<string, string> = {
@@ -18,10 +18,14 @@ const colorMap: Record<string, string> = {
   orange: "#FFA500",
   red: "#FF0000",
   purple: "#800080",
-}
+};
 
-export default function ColorDistribution({ distribution }: ColorDistributionProps) {
-  const sortedColors = Object.entries(distribution).sort(([, a], [, b]) => b - a)
+export default function ColorDistribution({
+  distribution,
+}: ColorDistributionProps) {
+  const sortedColors = Object.entries(distribution).sort(
+    ([, a], [, b]) => b - a,
+  );
 
   return (
     <div className="space-y-6">
@@ -36,7 +40,9 @@ export default function ColorDistribution({ distribution }: ColorDistributionPro
                 />
                 <span className="text-sm font-medium capitalize">{color}</span>
               </div>
-              <span className="text-sm font-mono">{percentage.toFixed(1)}%</span>
+              <span className="text-sm font-mono">
+                {percentage.toFixed(1)}%
+              </span>
             </div>
             <div className="w-full bg-muted/50 rounded-full h-2.5 overflow-hidden">
               <div
@@ -51,6 +57,5 @@ export default function ColorDistribution({ distribution }: ColorDistributionPro
         ))}
       </div>
     </div>
-  )
+  );
 }
-
